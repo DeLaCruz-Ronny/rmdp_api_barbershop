@@ -20,7 +20,7 @@ namespace api_barber.Servicios
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = "SELECT nombre,descripcion,precio,activo FROM SERVICIOS WHERE ACTIVO <> 0";
+            string query = "SELECT id,nombre,descripcion,precio,activo FROM Servicios WHERE ACTIVO <> 0";
             using var command = new MySqlCommand(query, connection);
 
             using var reader = await command.ExecuteReaderAsync();
@@ -28,9 +28,11 @@ namespace api_barber.Servicios
             {
                 servicios.Add(new Servicio
                 {
+                    Id = reader.GetInt32("id"),
                     Nombre = reader.GetString("Nombre"),
                     Descripcion = reader.GetString("Descripcion"),
-                    Precio = reader.GetDecimal("Precio")
+                    Precio = reader.GetDecimal("Precio"),
+                    Activo = reader.GetBoolean("Activo")
                 });
             }
 
