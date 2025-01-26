@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "api_barber.Controllers.ServicioController",
+    "Method": "ObtenerServicios",
+    "RelativePath": "api/Servicio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\api_barber.props" />
+</Project>

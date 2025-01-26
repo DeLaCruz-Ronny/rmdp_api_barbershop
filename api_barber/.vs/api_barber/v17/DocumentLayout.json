@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|c:\\users\\rmdpd\\onedrive\\escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|solutionrelative:api_barber\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|c:\\users\\rmdpd\\onedrive\\escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\servicios\\servicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|solutionrelative:api_barber\\servicios\\servicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|c:\\users\\rmdpd\\onedrive\\escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|solutionrelative:api_barber\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|c:\\users\\rmdpd\\onedrive\\escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CCADB47-19A3-419A-ADC5-E1B7AB66B003}|api_barber\\api_barber.csproj|solutionrelative:api_barber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServicioService.cs",
+              "DocumentMoniker": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Servicios\\ServicioService.cs",
+              "RelativeDocumentMoniker": "api_barber\\Servicios\\ServicioService.cs",
+              "ToolTip": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Servicios\\ServicioService.cs",
+              "RelativeToolTip": "api_barber\\Servicios\\ServicioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:57:21.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\appsettings.json",
+              "RelativeDocumentMoniker": "api_barber\\appsettings.json",
+              "ToolTip": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\appsettings.json",
+              "RelativeToolTip": "api_barber\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-26T17:11:39.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServicioController.cs",
+              "DocumentMoniker": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Controllers\\ServicioController.cs",
+              "RelativeDocumentMoniker": "api_barber\\Controllers\\ServicioController.cs",
+              "ToolTip": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Controllers\\ServicioController.cs",
+              "RelativeToolTip": "api_barber\\Controllers\\ServicioController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T20:42:39.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Program.cs",
+              "RelativeDocumentMoniker": "api_barber\\Program.cs",
+              "ToolTip": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Program.cs",
+              "RelativeToolTip": "api_barber\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T02:18:49.987Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "9Wf23zvxH0A8RSzOpb2uEGLSSeuJ7QfAmzsYWLlavH8=",
+  "Source": "api_barber",
+  "BasePath": "_content/api_barber",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
