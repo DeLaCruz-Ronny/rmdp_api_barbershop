@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Data;
 
+///asdsad
 namespace api_barber.Servicios
 {
     public class ServicioService
@@ -36,7 +37,7 @@ namespace api_barber.Servicios
                 });
             }
 
-            return servicios;
+            return servicios; 
         }
     }
 }

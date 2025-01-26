@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "api_barber\\Servicios\\ServicioService.cs",
               "ToolTip": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\Servicios\\ServicioService.cs",
               "RelativeToolTip": "api_barber\\Servicios\\ServicioService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T17:57:21.59Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "api_barber\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-26T17:11:39.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-26T17:11:39.647Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "api_barber\\Controllers\\ServicioController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T20:42:39.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T20:42:39.893Z"
             },
             {
               "$type": "Document",
