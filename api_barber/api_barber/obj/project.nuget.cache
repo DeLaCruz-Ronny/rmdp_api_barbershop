@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ciaQMr90RWs=",
+  "dgSpecHash": "o7LwO6xvpds=",
   "success": true,
   "projectFilePath": "C:\\Users\\rmdpd\\OneDrive\\Escritorio\\rmdp_api_barbershop\\api_barber\\api_barber\\api_barber.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\rmdpd\\.nuget\\packages\\k4os.compression.lz4\\1.3.8\\k4os.compression.lz4.1.3.8.nupkg.sha512",
     "C:\\Users\\rmdpd\\.nuget\\packages\\k4os.compression.lz4.streams\\1.3.8\\k4os.compression.lz4.streams.1.3.8.nupkg.sha512",
     "C:\\Users\\rmdpd\\.nuget\\packages\\k4os.hash.xxhash\\1.0.8\\k4os.hash.xxhash.1.0.8.nupkg.sha512",
+    "C:\\Users\\rmdpd\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\8.0.12\\microsoft.aspnetcore.authentication.certificate.8.0.12.nupkg.sha512",
     "C:\\Users\\rmdpd\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\rmdpd\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\rmdpd\\.nuget\\packages\\microsoft.build\\17.8.3\\microsoft.build.17.8.3.nupkg.sha512",

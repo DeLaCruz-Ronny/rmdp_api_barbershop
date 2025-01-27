@@ -294,3 +294,4 @@ C:\Users\rmdpd\OneDrive\Escritorio\rmdp_api_barbershop\api_barber\api_barber\bin
 C:\Users\rmdpd\OneDrive\Escritorio\rmdp_api_barbershop\api_barber\api_barber\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\rmdpd\OneDrive\Escritorio\rmdp_api_barbershop\api_barber\api_barber\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 C:\Users\rmdpd\OneDrive\Escritorio\rmdp_api_barbershop\api_barber\api_barber\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\rmdpd\OneDrive\Escritorio\rmdp_api_barbershop\api_barber\api_barber\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Certificate.dll

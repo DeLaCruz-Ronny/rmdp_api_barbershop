@@ -711,6 +711,25 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Certificate/8.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Razor.Language/6.0.24": {
         "type": "package",
         "compile": {
@@ -3936,6 +3955,21 @@
         "lib/netstandard2.0/K4os.Hash.xxHash.xml",
         "lib/netstandard2.1/K4os.Hash.xxHash.dll",
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/8.0.12": {
+      "sha512": "gmypvLBa5miSvqjFGhTCD5u329lWLC8tgOMVDGqN2veHJHeOR2LMM3ZQBehr03AihGrG2f9N9vgIwaWFEfDRVQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.certificate/8.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.Certificate.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Authentication.Certificate.xml",
+        "microsoft.aspnetcore.authentication.certificate.8.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.certificate.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.24": {
@@ -8797,6 +8831,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Microsoft.AspNetCore.Authentication.Certificate >= 8.0.12",
       "Microsoft.EntityFrameworkCore >= 9.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.1",
@@ -8855,6 +8890,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": {
+            "target": "Package",
+            "version": "[8.0.12, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.1, )"

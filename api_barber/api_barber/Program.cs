@@ -1,6 +1,7 @@
 using api_barber.Data;
 using api_barber.Models;
 using api_barber.Servicios;
+using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var mySQLConfiguration = new MySQLConfiguration(builder.Configuration.GetConnectionString("DefaultConnection"));
 builder.Services.AddSingleton(mySQLConfiguration);
+
+builder.Services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme).AddCertificate();
 
 builder.Services.AddScoped<ServicioService>();
 
@@ -31,5 +34,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseAuthentication();
 
 app.Run();
