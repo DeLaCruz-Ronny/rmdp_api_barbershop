@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //builder.Services.AddDbContext<BarberiaContext>(options =>
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+//a
 var mySQLConfiguration = new MySQLConfiguration(builder.Configuration.GetConnectionString("DefaultConnection"));
 builder.Services.AddSingleton(mySQLConfiguration);
 
