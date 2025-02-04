@@ -1,6 +1,7 @@
 using api_barber.Data;
 using api_barber.Models;
 using api_barber.Servicios;
+using api_barber.Usuarios;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,9 @@ builder.Services.AddSingleton(mySQLConfiguration);
 builder.Services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme).AddCertificate();
 
 builder.Services.AddScoped<ServicioService>();
+builder.Services.AddScoped<UsuariosService>();
+
+builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,57 +1,55 @@
 ﻿using api_barber.Models;
-using api_barber.Models.DTOs;
-using AutoMapper;
 using MySql.Data.MySqlClient;
 using System.Data;
 
 
-namespace api_barber.Servicios
+namespace api_barber.Usuarios
 {
-    public class ServicioService
+    public class UsuariosService
     {
         private readonly string ?_context;
-        private readonly IMapper _mapper;
 
-        public ServicioService(IConfiguration configuration, IMapper mapper)
+        public UsuariosService(IConfiguration configuration)
         {
             _context = configuration.GetConnectionString("DefaultConnection");
-            _mapper = mapper;
         }
 
-        public async Task<List<ServicioDTO>> ObtenerTodosLosServicios()
+        public async Task<List<Usuario>> ObtenerTodosLosUsarios()
         {
-            var servicios = new List<Servicio>();
+            var servicios = new List<Usuario>();
 
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = "SELECT id,nombre,descripcion,precio,activo FROM Servicios WHERE ACTIVO <> 0";
+            string query = "SELECT id,nombre,telefono,email,rol,fecha_registro,activo FROM Usuarios WHERE ACTIVO <> 0";
             using var command = new MySqlCommand(query, connection);
 
             using var reader = await command.ExecuteReaderAsync();
             while(await reader.ReadAsync())
             {
-                servicios.Add(new Servicio
+                servicios.Add(new Usuario
                 {
                     Id = reader.GetInt32("id"),
                     Nombre = reader.GetString("Nombre"),
-                    Descripcion = reader.GetString("Descripcion"),
-                    Precio = reader.GetDecimal("Precio"),
+                    Telefono = reader.GetString("Telefono"),
+                    Email = reader.GetString("Email"),
+                    Rol = reader.GetString("Rol"),
+                    FechaRegistro = reader.GetDateTime("Fecha_registro"),
                     Activo = reader.GetBoolean("Activo")
                 });
             }
 
-            return _mapper.Map<List<ServicioDTO>>(servicios); 
+            return servicios; 
         }
 
-        public async Task<ServicioDTO?> ObtenerServiciosPorId(int id)
+        public async Task<Usuario?> ObtenerUsuariosPorId(int id)
         {
-            Servicio? servicios = null;
+            Usuario? usuario = null;
 
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = "SELECT id,nombre,descripcion,precio,activo FROM Servicios WHERE ACTIVO <> 0 and id = @id";
+            string query = "SELECT id,nombre,telefono,email,rol,fecha_registro,activo FROM Usuarios WHERE ACTIVO <> 0 and id = @id";
             using var command = new MySqlCommand(query, connection);
 
             //Evitamos las inyecciones de sql
@@ -60,42 +58,45 @@ namespace api_barber.Servicios
             using var reader = await command.ExecuteReaderAsync();
             if (await reader.ReadAsync())
             {
-                servicios = new Servicio
+                usuario = new Usuario
                 {
                     Id = reader.GetInt32("id"),
                     Nombre = reader.GetString("Nombre"),
-                    Descripcion = reader.GetString("Descripcion"),
-                    Precio = reader.GetDecimal("Precio"),
+                    Telefono = reader.GetString("Telefono"),
+                    Email = reader.GetString("Email"),
+                    Rol = reader.GetString("Rol"),
+                    FechaRegistro = reader.GetDateTime("Fecha_registro"),
                     Activo = reader.GetBoolean("Activo")
                 };
             }
 
-            return _mapper.Map<ServicioDTO>(servicios);
+            return usuario;
         }
 
-        public async Task<bool> CrearServicio(Servicio? newservicios)
+        public async Task<bool> CrearUsuarios(Usuario? newsusuarios)
         {
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = "INSERT INTO Servicios(nombre,descripcion,precio) VALUES (@nombre,@descripcion,@precio)";
+            string query = "INSERT INTO Usuarios(nombre,telefono,email,rol) VALUES (@nombre,@telefono,@email,@rol)";
             using var command = new MySqlCommand(query, connection);
 
             //Evitamos las inyecciones de sql
-            command.Parameters.AddWithValue("@nombre", newservicios?.Nombre);
-            command.Parameters.AddWithValue("@descripcion", newservicios?.Descripcion);
-            command.Parameters.AddWithValue("@precio", newservicios?.Precio);
+            command.Parameters.AddWithValue("@nombre", newsusuarios?.Nombre);
+            command.Parameters.AddWithValue("@telefono", newsusuarios?.Telefono);
+            command.Parameters.AddWithValue("@email", newsusuarios?.Email);
+            command.Parameters.AddWithValue("@rol", newsusuarios?.Rol);
 
             var insertados = await command.ExecuteNonQueryAsync();
             return insertados > 0;
         }
 
-        public async Task<bool> EliminarServicio(int id)
+        public async Task<bool> EliminarUsuario(int id)
         {
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = "UPDATE Servicios SET activo = 0 WHERE id = @id";
+            string query = "UPDATE Usuarios SET activo = 0 WHERE id = @id";
             using var command = new MySqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@id", id);
@@ -104,25 +105,27 @@ namespace api_barber.Servicios
             return delete > 0;
         }
 
-        public async Task<bool> ActualizarServicios(Servicio servicio)
+        public async Task<bool> ActualizarUsuarios(Usuario usuario)
         {
             using var connection = new MySqlConnection(_context);
             await connection.OpenAsync();
 
-            string query = @"UPDATE Servicios
+            string query = @"UPDATE Usuarios
                              SET nombre = @nombre,
-                                 descripcion = @descripcion,
-                                 precio = @precio,
+                                 telefono = @telefono,
+                                 email = @email,
+                                 rol = @rol,
                                  activo = @activo
                              WHERE id = @id";
 
             using var command = new MySqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@id", servicio.Id);
-            command.Parameters.AddWithValue("@nombre", servicio.Nombre);
-            command.Parameters.AddWithValue("@descripcion", servicio.Descripcion);
-            command.Parameters.AddWithValue("@precio", servicio.Precio);
-            command.Parameters.AddWithValue("@activo", servicio.Activo);
+            command.Parameters.AddWithValue("@id", usuario?.Id);
+            command.Parameters.AddWithValue("@nombre", usuario?.Nombre);
+            command.Parameters.AddWithValue("@telefono", usuario?.Telefono);
+            command.Parameters.AddWithValue("@email", usuario?.Email);
+            command.Parameters.AddWithValue("@rol", usuario?.Rol);
+            command.Parameters.AddWithValue("@activo", usuario?.Activo);
 
             var update = await command.ExecuteNonQueryAsync();
             return update > 0;

@@ -1,4 +1,5 @@
 ﻿using api_barber.Models;
+using api_barber.Models.DTOs;
 using api_barber.Servicios;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,14 +20,14 @@ namespace api_barber.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ObtenerServicios()
+        public async Task<ActionResult<List<ServicioDTO>>> ObtenerServicios()
         {
             var allServicios = await _service.ObtenerTodosLosServicios();
             return Ok(allServicios);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> ObtenerServiciosPorId(int id)
+        public async Task<ActionResult<ServicioDTO>> ObtenerServiciosPorId(int id)
         {
             var servicio = await _service.ObtenerServiciosPorId(id);
 
